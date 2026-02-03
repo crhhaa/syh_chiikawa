@@ -251,7 +251,7 @@ header p {
 
     /* 3. 調整卡片區：強制變成「兩欄」並縮小間距 */
     .gallery-grid {
-        grid-template-columns: repeat(5, 1fr); /* 強制兩欄，比較好看 */
+        grid-template-columns: repeat(4, 1fr); /* 強制兩欄，比較好看 */
         gap: 10px; /* 間距縮小 */
         padding: 10px;
     }
