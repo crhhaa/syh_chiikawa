@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的吉伊卡哇收藏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        
+        <div class="title-area">
+            <h1>☁️☁️ㄉ寶寶圖鑑！！！！</h1>
+            <p>資料來源：☁️ㄉ寶貝 (媽媽持續買進、同步更新中！)</p>
+        </div>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="filterData('吉伊')">
+                <div class="icon-box"><img src="https://i.postimg.cc/vZDs4YNZ/icon.png" alt="吉伊"></div>
+                <span>吉伊</span>
+            </button>
+            
+            <button class="tab-btn" onclick="filterData('小八')">
+                <div class="icon-box"><img src="https://i.postimg.cc/sDTzfQKL/icon.png" alt="小八"></div>
+                <span>小八</span>
+            </button>
+            
+            <button class="tab-btn" onclick="filterData('兔兔')">
+                <div class="icon-box"><img src="https://i.postimg.cc/xdzVPsYr/icon.png" alt="兔兔"></div>
+                <span>☁️ㄉ寶貝小兔！</span>
+            </button>
+            
+            <button class="tab-btn" onclick="filterData('小桃')">
+                <div class="icon-box"><img src="https://i.postimg.cc/9MP36rrJ/icon.png" alt="小桃"></div>
+                <span>小桃</span>
+            </button>
+            
+            <button class="tab-btn" onclick="filterData('師傅')">
+                <div class="icon-box"><img src="https://i.postimg.cc/fTq4Q4Rn/icon.png" alt="師傅"></div>
+                <span>師傅</span>
+            </button>
+            
+            <button class="tab-btn" onclick="filterData('栗子')">
+                <div class="icon-box"><img src="https://i.postimg.cc/FzGMK8bS/icon.png" alt="栗子"></div>
+                <span>栗子</span>
+            </button>
+            
+            <button class="tab-btn" onclick="filterData('獅薩')">
+                <div class="icon-box"><img src="https://i.postimg.cc/660Jz4sQ/icon.png" alt="獅薩"></div>
+                <span>獅薩</span>
+            </button>
+            
+            <button class="tab-btn" onclick="filterData('古本')">
+                <div class="icon-box"><img src="https://i.postimg.cc/nh5t7yyY/icon.png" alt="古本"></div>
+                <span>古本</span>
+            </button>
+            
+            <button class="tab-btn" onclick="filterData('其他角色')">
+                <div class="icon-box"><img src="https://i.postimg.cc/63xJbd58/icon.png" alt="其他角色"></div>
+                <span>就是其他</span>
+            </button>
+        </div>
+
+        <div id="sub-tabs" class="sub-tabs"></div>
+    </header>
+
+    <main>
+        <div id="loading">正在連線到 Google Sheets...</div>
+        <div id="gallery" class="gallery-grid"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

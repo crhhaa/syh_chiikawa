@@ -1,0 +1,205 @@
+/* 🌟 全域設定：日系柔和色調 */
+body {
+    font-family: '微軟正黑體', 'Helvetica Neue', sans-serif;
+    /* 背景：極淡的奶油米色 */
+    background-color: #fdfcf8; 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #6d5c56; /* 字體：深咖啡色，比黑色柔和 */
+}
+
+/* 🌟 上方裝飾條 (模仿參考圖的咖啡色頂部) */
+.top-bar {
+    background-color: #d7ccc8; /* 淺拿鐵色 */
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* 🌟 Header 區域 */
+header {
+    background-color: #fdfcf8; /* 跟背景融合 */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efebe9; /* 淡淡的分隔線 */
+}
+
+.title-area {
+    padding: 30px 20px 10px 20px;
+}
+
+h1 {
+    color: #8d6e63; /* 標題：較淺的咖啡色 */
+    font-size: 2em;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #a1887f;
+    font-size: 0.9em;
+}
+
+/* 🌟 主選單：圓形頭像排列 */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* 按鈕之間的距離 */
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+/* 按鈕本體 (隱形背景，只留圖跟字) */
+.tab-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* 讓圖在上，字在下 */
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.tab-btn:hover {
+    transform: translateY(-5px); /* 滑鼠移過去微微浮起 */
+}
+
+/* 圖片外框 (圓形) */
+.icon-box {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: white; /* 圖片背景白色的 */
+    border: 3px solid #eee; /* 預設灰框 */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    transition: all 0.3s;
+}
+
+.tab-btn img {
+    width: 80%; /* 圖片稍微縮小一點，留白邊比較可愛 */
+    height: auto;
+}
+
+/* 文字標籤 */
+.tab-btn span {
+    font-size: 14px;
+    color: #8d6e63;
+    font-weight: bold;
+}
+
+/* ✨ 選中狀態 (Active) ✨ */
+/* 模仿參考圖：選中時框框變色 */
+.tab-btn.active .icon-box {
+    border-color: #ffccbc; /* 淡淡的粉橘色/肉色，很像參考圖的風格 */
+    background-color: #fffbf0; /* 選中時背景微黃 */
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ffccbc; /* 雙層光圈效果 */
+}
+
+.tab-btn.active span {
+    color: #ff8a65; /* 選中時文字變亮 */
+}
+
+/* 🌟 子選單 (Type) */
+.sub-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.sub-tab-btn {
+    padding: 5px 15px;
+    border: 1px solid #d7ccc8;
+    background: white;
+    border-radius: 20px;
+    color: #8d6e63;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sub-tab-btn:hover {
+    background-color: #fff3e0;
+}
+
+.sub-tab-btn.active {
+    background-color: #ffccbc; /* 跟主選單呼應的顏色 */
+    color: white;
+    border-color: #ffccbc;
+}
+
+/* 🌟 卡片展示區 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+    padding: 30px 20px;
+    max-width: 1000px; /* 稍微窄一點，更有圖鑑感 */
+    margin: 0 auto;
+}
+
+/* 🌟 卡片樣式 - 固定尺寸版 */
+.card {
+    background: white;
+    border: 1px solid #efebe9;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
+    
+    /* 👇 關鍵修改從這裡開始 👇 */
+    height: 220px; /* 設定一個固定高度 (你可以依需求改成 280px 或 300px) */
+    display: flex;
+    flex-direction: column; /* 讓內容由上往下排 */
+    justify-content: space-between; /* 讓內容平均分佈，或搭配 margin-top: auto 把文字推到底部 */
+    /* 👆 關鍵修改結束 👆 */
+
+    /* 未擁有狀態 */
+    opacity: 0.5;
+    filter: grayscale(90%);
+}
+
+.card.owned {
+    opacity: 1;
+    filter: grayscale(0%);
+    border: 2px solid #ffccbc;
+    box-shadow: 0 4px 10px rgba(215, 204, 200, 0.3);
+    transform: translateY(-2px);
+}
+
+.card img {
+    width: 100%;
+    /* 👇 圖片固定高度設定 👇 */
+    height: 140px; /* 固定圖片區域的高度 */
+    object-fit: contain; /* 保持比例，不會把娃娃拉寬或壓扁，會留白邊 */
+    /* object-fit: cover;如果你希望填滿整個框框(可能會切到頭或腳)就改用這個 */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 14px;
+    margin: 0;
+    color: #5d4037;
+    
+    /* 如果名字太長，超過兩行就顯示 ... */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 👇 針對你提到的 size 欄位設定 👇 */
+.size {
+    font-size: 10px;
+    color: #9e9e9e;
+    margin-top: auto; /* 這一行最重要！它會把尺寸資訊「推」到卡片的最下面 */
+    padding-top: 8px; /* 跟上面的名字保持一點距離 */
+}
