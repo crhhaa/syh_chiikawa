@@ -247,7 +247,7 @@ header p {
 
     /* 3. ✨ 關鍵修改：改成 4 欄 ✨ */
     .gallery-grid {
-        grid-template-columns: repeat(4, 1fr); /* 強制 4 欄 */
+        grid-template-columns: repeat(3, 1fr); /* 強制 4 欄 */
         gap: 6px; /* 間距變很窄 */
         padding: 10px 5px; /* 左右留白變少 */
     }
@@ -255,7 +255,7 @@ header p {
     /* 4. ✨ 卡片等比例縮小 ✨ */
     .card {
         height: 130px; /* 高度大幅縮小 (原本220px -> 130px) */
-        padding: 5px; /* 內距變小 */
+        padding: 2.5px; /* 內距變小 */
         border-radius: 6px; /* 圓角變小 */
         border-width: 1px; /* 邊框變細 */
     }
