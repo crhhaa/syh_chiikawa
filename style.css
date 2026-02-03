@@ -156,7 +156,7 @@ header p {
     transition: 0.3s;
     
     /* 👇 關鍵修改從這裡開始 👇 */
-    height: 220px; /* 設定一個固定高度 (你可以依需求改成 280px 或 300px) */
+    height: 180px; /* 設定一個固定高度 (你可以依需求改成 280px 或 300px) */
     display: flex;
     flex-direction: column; /* 讓內容由上往下排 */
     justify-content: space-between; /* 讓內容平均分佈，或搭配 margin-top: auto 把文字推到底部 */
@@ -194,7 +194,10 @@ header p {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto; /* 讓名字自動垂直居中 */
 }
+
 
 /* 👇 針對你提到的 size 欄位設定 👇 */
 .size {

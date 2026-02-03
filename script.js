@@ -112,7 +112,6 @@ function renderGallery(items) {
         card.innerHTML = `
             <img src="${imgUrl}" loading="lazy">
             <h3>${item.Name}</h3>
-            <p class="size">${item.Size || ''}</p>
         `;
         gallery.appendChild(card);
     });
