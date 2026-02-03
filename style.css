@@ -262,7 +262,7 @@ header p {
 
     /* 圖片縮小 */
     .card img {
-        height: 80px; /* 圖片高度減半 */
+        height: 100px; /* 圖片高度減半 */
         margin-bottom: 5px;
         border-radius: 4px;
     }
