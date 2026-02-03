@@ -205,73 +205,85 @@ header p {
 }
 
 
-/* 📱 手機版專用設定 (RWD) */
+/* 📱 手機版專用設定 (RWD) - 4欄迷你版 */
 @media screen and (max-width: 768px) {
     
-    /* 1. 調整標題大小，不要佔太多位子 */
+    /* 1. 標題縮小 */
     h1 {
-        font-size: 1.5em; /* 字變小 */
+        font-size: 1.2em;
         margin-bottom: 5px;
     }
     
     .title-area {
-        padding: 15px 10px; /* 減少留白 */
+        padding: 10px 5px;
     }
 
-    /* 2. 調整上方圓形選單：讓它變成「橫向滑動」 (像 IG 限動那樣) */
+    /* 2. 上方選單：橫向滑動 (保持不變，這樣最好用) */
     .tabs {
-        flex-wrap: nowrap; /* 不換行 */
-        overflow-x: auto; /* 超出範圍就滑動 */
-        justify-content: flex-start; /* 靠左對齊 */
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
         padding-bottom: 10px;
-        -webkit-overflow-scrolling: touch; /* 讓滑動更順暢 */
-        
-        /* 隱藏捲軸 (美觀) */
+        -webkit-overflow-scrolling: touch;
         scrollbar-width: none; 
-        -ms-overflow-style: none;
     }
     .tabs::-webkit-scrollbar {
         display: none;
     }
 
     .tab-btn {
-        flex: 0 0 auto; /* 防止按鈕被壓扁 */
-        padding: 5px;
+        flex: 0 0 auto;
+        padding: 2px; /* 縮小按鈕間距 */
     }
 
-    /* 縮小手機版的頭像 */
     .icon-box {
-        width: 55px;
-        height: 55px;
+        width: 50px; /* 頭像縮小一點點 */
+        height: 50px;
     }
     
     .tab-btn span {
-        font-size: 12px;
+        font-size: 11px;
     }
 
-    /* 3. 調整卡片區：強制變成「兩欄」並縮小間距 */
+    /* 3. ✨ 關鍵修改：改成 4 欄 ✨ */
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* 強制兩欄，比較好看 */
-        gap: 10px; /* 間距縮小 */
-        padding: 10px;
+        grid-template-columns: repeat(4, 1fr); /* 強制 4 欄 */
+        gap: 6px; /* 間距變很窄 */
+        padding: 10px 5px; /* 左右留白變少 */
     }
 
-    /* 4. 調整卡片高度與內容 */
+    /* 4. ✨ 卡片等比例縮小 ✨ */
     .card {
-        height: 120px; /* 手機版卡片不用那麼高 */
-        padding: 8px;
+        height: 130px; /* 高度大幅縮小 (原本220px -> 130px) */
+        padding: 5px; /* 內距變小 */
+        border-radius: 6px; /* 圓角變小 */
+        border-width: 1px; /* 邊框變細 */
     }
 
+    /* 圖片縮小 */
     .card img {
-        height: 100px; /* 圖片縮小一點 */
+        height: 60px; /* 圖片高度減半 */
+        margin-bottom: 5px;
+        border-radius: 4px;
     }
 
+    /* 名字字體縮小 */
     .card h3 {
-        font-size: 13px; /* 名字字體縮小 */
+        font-size: 10px; /* 字變很小才塞得下 */
+        line-height: 1.2;
+        /* 強制只顯示 2 行，超過變 ... */
+        -webkit-line-clamp: 2; 
     }
     
-    /* 尺寸文字再改小一點點 */
+    /* 尺寸文字縮小 */
     .size {
-        font-size: 11px; 
+        font-size: 9px; /* 迷你字體 */
+        padding-top: 2px;
+    }
+    
+    /* 子選單按鈕也要縮小，不然會佔滿畫面 */
+    .sub-tab-btn {
+        padding: 3px 10px;
+        font-size: 12px;
     }
 }
