@@ -279,12 +279,6 @@ header p {
         -webkit-line-clamp: 2; 
     }
     
-    /* 尺寸文字縮小 */
-    .size {
-        font-size: 9px; /* 迷你字體 */
-        padding-top: 2px;
-    }
-    
     /* 子選單按鈕也要縮小，不然會佔滿畫面 */
     .sub-tab-btn {
         padding: 3px 14px;
