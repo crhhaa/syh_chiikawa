@@ -205,44 +205,48 @@ header p {
 }
 
 
-/* 📱 手機版專用設定 (RWD) - 4欄迷你版 */
+/* 📱 手機版專用設定 (RWD) */
 @media screen and (max-width: 768px) {
     
-    /* 1. 標題縮小 */
+    /* 1. 調整標題大小，不要佔太多位子 */
     h1 {
-        font-size: 1.2em;
+        font-size: 1.5em; /* 字變小 */
         margin-bottom: 5px;
     }
     
     .title-area {
-        padding: 10px 5px;
+        padding: 15px 10px; /* 減少留白 */
     }
 
-    /* 2. 上方選單：橫向滑動 (保持不變，這樣最好用) */
+    /* 2. 調整上方圓形選單：讓它變成「橫向滑動」 (像 IG 限動那樣) */
     .tabs {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: flex-start;
+        flex-wrap: nowrap; /* 不換行 */
+        overflow-x: auto; /* 超出範圍就滑動 */
+        justify-content: flex-start; /* 靠左對齊 */
         padding-bottom: 10px;
-        -webkit-overflow-scrolling: touch;
+        -webkit-overflow-scrolling: touch; /* 讓滑動更順暢 */
+        
+        /* 隱藏捲軸 (美觀) */
         scrollbar-width: none; 
+        -ms-overflow-style: none;
     }
     .tabs::-webkit-scrollbar {
         display: none;
     }
 
     .tab-btn {
-        flex: 0 0 auto;
-        padding: 2px; /* 縮小按鈕間距 */
+        flex: 0 0 auto; /* 防止按鈕被壓扁 */
+        padding: 5px;
     }
 
+    /* 縮小手機版的頭像 */
     .icon-box {
-        width: 50px; /* 頭像縮小一點點 */
-        height: 50px;
+        width: 55px;
+        height: 55px;
     }
     
     .tab-btn span {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     /* 3. ✨ 關鍵修改：改成 4 欄 ✨ */
@@ -254,7 +258,7 @@ header p {
 
     /* 4. ✨ 卡片等比例縮小 ✨ */
     .card {
-        height: 130px; /* 高度大幅縮小 (原本220px -> 130px) */
+        height: 150px; /* 高度大幅縮小 (原本220px -> 130px) */
         padding: 2.5px; /* 內距變小 */
         border-radius: 6px; /* 圓角變小 */
         border-width: 1px; /* 邊框變細 */
@@ -262,7 +266,7 @@ header p {
 
     /* 圖片縮小 */
     .card img {
-        height: 100px; /* 圖片高度減半 */
+        height: 120px; /* 圖片高度減半 */
         margin-bottom: 5px;
         border-radius: 4px;
     }
