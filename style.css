@@ -258,7 +258,7 @@ header p {
 
     /* 4. 調整卡片高度與內容 */
     .card {
-        height: 190px; /* 手機版卡片不用那麼高 */
+        height: 130px; /* 手機版卡片不用那麼高 */
         padding: 8px;
     }
 
