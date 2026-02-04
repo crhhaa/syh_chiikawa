@@ -1,10 +1,10 @@
-// 使用你提供的新 API 網址
+// API
 const API_URL = 'https://opensheet.elk.sh/14yiC0kHoWzoDLSLByLNat8AHVfTrbgOj9y797G3o_Zg/syh_chiikawa';
 
 let allData = [];
-let currentCharacterData = []; // 暫存當前角色的所有資料
+let currentCharacterData = []; 
 
-// 1. 啟動時下載資料
+// 1. load data
 async function fetchData() {
     try {
         const response = await fetch(API_URL);
@@ -18,7 +18,6 @@ async function fetchData() {
         allData = json;
         document.getElementById('loading').style.display = 'none';
         
-        // 預設先顯示「吉伊」
         filterData('吉伊');
 
     } catch (e) {
@@ -27,7 +26,7 @@ async function fetchData() {
     }
 }
 
-// 2. 第一層過濾：切換角色 (Character)
+// 2. Character
 function filterData(targetName) {
     // 變更主選單按鈕顏色
     document.querySelectorAll('.tabs .tab-btn').forEach(btn => {
@@ -39,14 +38,14 @@ function filterData(targetName) {
     // 注意：這裡假設你的 Sheet 欄位是 Character (若為中文請改 item.角色)
     currentCharacterData = allData.filter(item => item.Character === targetName);
 
-    // ✨ 自動產生 Type 子分類按鈕
+    // 自動產生 Type 子分類按鈕
     generateTypeButtons();
 
     // 預設顯示「全部」類型
     renderGallery(currentCharacterData);
 }
 
-// 3. ✨ 自動產生子分類按鈕
+// 3. 產生子分類按鈕
 function generateTypeButtons() {
     const subTabsContainer = document.getElementById('sub-tabs');
     subTabsContainer.innerHTML = ''; // 清空舊按鈕

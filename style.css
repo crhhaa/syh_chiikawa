@@ -1,4 +1,4 @@
-/* 🌟 全域設定：日系柔和色調 */
+/* 全域設定：日系柔和色調 */
 body {
     font-family: '微軟正黑體', 'Helvetica Neue', sans-serif;
     /* 背景：極淡的奶油米色 */
@@ -9,7 +9,7 @@ body {
     color: #6d5c56; /* 字體：深咖啡色，比黑色柔和 */
 }
 
-/* 🌟 上方裝飾條 (模仿參考圖的咖啡色頂部) */
+/* 上方裝飾條 (咖啡色頂部) */
 .top-bar {
     background-color: #d7ccc8; /* 淺拿鐵色 */
     color: white;
@@ -18,7 +18,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* 🌟 Header 區域 */
+/* Header */
 header {
     background-color: #fdfcf8; /* 跟背景融合 */
     padding-bottom: 20px;
@@ -41,7 +41,7 @@ header p {
     font-size: 0.9em;
 }
 
-/* 🌟 主選單：圓形頭像排列 */
+/* 主選單：圓形頭像排列 */
 .tabs {
     display: flex;
     flex-wrap: wrap;
@@ -94,8 +94,7 @@ header p {
     font-weight: bold;
 }
 
-/* ✨ 選中狀態 (Active) ✨ */
-/* 模仿參考圖：選中時框框變色 */
+/* 選中狀態 (Active) 選中時框框變色 */
 .tab-btn.active .icon-box {
     border-color: #ffccbc; /* 淡淡的粉橘色/肉色，很像參考圖的風格 */
     background-color: #fffbf0; /* 選中時背景微黃 */
@@ -106,7 +105,7 @@ header p {
     color: #ff8a65; /* 選中時文字變亮 */
 }
 
-/* 🌟 子選單 (Type) */
+/* 子選單 */
 .sub-tabs {
     display: flex;
     justify-content: center;
@@ -136,7 +135,7 @@ header p {
     border-color: #ffccbc;
 }
 
-/* 🌟 卡片展示區 */
+/* 卡片展示區 */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -146,7 +145,7 @@ header p {
     margin: 0 auto;
 }
 
-/* 🌟 卡片樣式 - 固定尺寸版 */
+/* 卡片樣式 - 固定尺寸 */
 .card {
     background: white;
     border: 1px solid #efebe9;
@@ -155,12 +154,10 @@ header p {
     text-align: center;
     transition: 0.3s;
     
-    /* 👇 關鍵修改從這裡開始 👇 */
     height: 180px; /* 設定一個固定高度 (你可以依需求改成 280px 或 300px) */
     display: flex;
     flex-direction: column; /* 讓內容由上往下排 */
     justify-content: space-between; /* 讓內容平均分佈，或搭配 margin-top: auto 把文字推到底部 */
-    /* 👆 關鍵修改結束 👆 */
 
     /* 未擁有狀態 */
     opacity: 0.5;
@@ -177,7 +174,7 @@ header p {
 
 .card img {
     width: 100%;
-    /* 👇 圖片固定高度設定 👇 */
+
     height: 140px; /* 固定圖片區域的高度 */
     object-fit: contain; /* 保持比例，不會把娃娃拉寬或壓扁，會留白邊 */
     /* object-fit: cover;如果你希望填滿整個框框(可能會切到頭或腳)就改用這個 */
